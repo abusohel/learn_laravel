@@ -12,6 +12,7 @@
 */
 Route::get('/', 'PagesController@welcome');
 Route::get('about', 'PagesController@about');
+Route::resource('songs', 'SongsController');
 // Route::get('/', function () {
 //     return view('welcome'); //welcome.blade.php
 // });
