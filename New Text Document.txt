@@ -6,3 +6,4 @@ w DateTime]);
 
 DB::table('songs')->get();
 DB::table('songs')->where('id',2)->get();
+php artisan make:model song
