@@ -12,8 +12,9 @@ class SongsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('songs.index');
+    {   
+        $songs=\DB::table('songs')->get();
+        return view('songs.index', compact('songs'));
     }
 
     /**
