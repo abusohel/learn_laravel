@@ -13,7 +13,7 @@ class SongsController extends Controller
      */
     public function index()
     {
-        //
+        return view('songs.index');
     }
 
     /**
