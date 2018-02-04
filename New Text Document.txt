@@ -7,3 +7,24 @@ w DateTime]);
 DB::table('songs')->get();
 DB::table('songs')->where('id',2)->get();
 php artisan make:model song
+
+php artisan make:migration create_user_table --create=users
+php artisan make:migration create_passport_table --create=passports
+php artisan migrate
+ DB::table('users')->insert(['name'=>'sohel','created_at'=>new DateTime,'updated_at'=>new DateTime]);
+App\user::all();
+php artisan make:model user
+php artisan make:model passport
+DB::table('passports')->insert(['number'=>'125358','user_id'=>'2','created_at'=>new DateTime,'updated_at'=>new DateT
+ime]);
+
+App\user::find(1);
+App\user::find(1)->passport
+ public function passport(){
+    	return $this->hasOne(Passport::class);
+    }
+
+ public function user(){
+    	return $this->belongsto(User::class);
+    }
+App\passport::find(1)->user
