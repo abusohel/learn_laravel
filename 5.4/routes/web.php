@@ -13,7 +13,7 @@
 Route::get('/', 'PagesController@welcome');
 Route::get('about', 'PagesController@about');
 Route::resource('songs', 'SongsController');
-// Route::get('home','HomeController@home');
+Route::get('home','HomeController@home');
 // Route::get('/', function () {
 //     return view('welcome'); //welcome.blade.php
 // });
