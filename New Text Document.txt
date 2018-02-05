@@ -1,8 +1,7 @@
 
 php artisan tinker
 
-DB::table('songs')->insert(['title'=>'closer', 'artist'=>'chainsmoker', 'created_at'=>new DateTime, 'updated_at'=>ne
-w DateTime]);
+DB::table('songs')->insert(['title'=>'closer', 'artist'=>'chainsmoker', 'created_at'=>new DateTime, 'updated_at'=>new DateTime]);
 
 DB::table('songs')->get();
 DB::table('songs')->where('id',2)->get();
@@ -30,3 +29,12 @@ App\user::find(1)->passport
     	return $this->belongsto(User::class);
     }
 App\passport::find(1)->user
+
+DB::table('posts')->insert(['user_id'=>'1', 'title'=>'this is the first post']);
+php artisan make:migration create_posts_table --create=posts
+
+ $table->increments('id');
+            $table->integer('usr_id');
+            $table->string('title');
+
+ App\country::find(1)->posts;
