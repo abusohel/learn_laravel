@@ -10,6 +10,8 @@ php artisan make:model song
 
 php artisan make:migration create_user_table --create=users
 php artisan make:migration create_passport_table --create=passports
+
+php artisan make:migration create_role_user_table --create=role_user
 php artisan migrate
  DB::table('users')->insert(['name'=>'sohel','created_at'=>new DateTime,'updated_at'=>new DateTime]);
 App\user::all();
